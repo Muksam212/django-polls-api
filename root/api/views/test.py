@@ -8,7 +8,6 @@ class TestPoll(APITestCase):
     def setUp(self):
         self.factory = APIRequestFactory()
         self.view = PollList.as_view()
-        print(self.view,"==============")
         self.uri = '/api/poll/list/'
 
     def test_list(self):
