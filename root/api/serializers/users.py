@@ -26,11 +26,11 @@ class UserRegisterSerializer(serializers.ModelSerializer):
 
 class UserListSerializer(serializers.ModelSerializer):
     #nested serializers
-    # user_created = PollSerializer(many = True)
+    user_created = PollSerializer(many = True)
     id = serializers.IntegerField(read_only = True)
     class Meta:
         model = User
-        fields = ("id", "username", "email")
+        fields = ("id", "username", "email","user_created")
 
 
 
